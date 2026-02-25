@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    text-align: center;
+    color: white;
+}
+
+.container {
+    padding: 30px;
+}
+
+.gallery img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px pink;
+}
+
+video {
+    width: 300px;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.buttons {
+    position: relative;
+}
