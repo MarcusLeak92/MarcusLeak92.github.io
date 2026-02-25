@@ -18,3 +18,15 @@ function moveNo(button) {
     button.style.left = Math.random() * 300 + "px";
     button.style.top = Math.random() * 300 + "px";
 }
+function toggleMusic() {
+    var music = document.getElementById("bg-music");
+    var button = document.getElementById("music-btn");
+
+    if (music.paused) {
+        music.play();
+        button.innerHTML = "⏸ Pause Music 🤍";
+    } else {
+        music.pause();
+        button.innerHTML = "▶ Play Music 🤍";
+    }
+}
