@@ -1,35 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>For You ❤️</title>
+    <title>For Audrey 🤍</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Hey Beautiful 💕</h1>
-        <p>From the moment we met, my world changed.</p>
+<!-- PASSWORD SCREEN -->
+<div id="password-screen">
+    <h2>Enter the Secret Code 🤍</h2>
+    <input type="password" id="password-input" placeholder="Enter password">
+    <button onclick="checkPassword()">Enter</button>
+    <p id="wrong-password"></p>
+</div>
 
-        <div class="gallery">
-            <img src="images/photo1.jpg" alt="Memory 1">
-            <img src="images/photo2.jpg" alt="Memory 2">
-        </div>
+<!-- MAIN CONTENT (Hidden at First) -->
+<div id="main-content" class="hidden">
 
-        <div class="videos">
-            <video controls>
-                <source src="videos/video1.mp4" type="video/mp4">
-            </video>
-        </div>
+    <audio autoplay loop>
+        <source src="music/song.mp3" type="audio/mp3">
+    </audio>
 
-        <h2>Will you be my girlfriend? 💖</h2>
+    <h1>Audrey Joy Rankin 🤍</h1>
+    <p>You are the most beautiful part of my world.</p>
 
-        <div class="buttons">
-            <button onclick="sayYes()">YES 💘</button>
-            <button onclick="moveNo(this)">No 😢</button>
-        </div>
+    <!-- Floating Hearts -->
+    <div class="hearts"></div>
 
-        <p id="response"></p>
+    <!-- Photo Collage -->
+    <div class="collage">
+        <img src="images/photo1.jpg">
+        <img src="images/photo2.jpg">
     </div>
+
+    <!-- Video -->
+    <div class="video-section">
+        <video controls>
+            <source src="videos/video1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h2>Will you be my girlfriend? 🌷🤍</h2>
+
+    <div class="buttons">
+        <button onclick="sayYes()">Yes 🤍</button>
+        <button onclick="moveNo(this)">No</button>
+    </div>
+
+    <p id="response"></p>
+
+</div>
 
 <script src="script.js"></script>
 </body>
