@@ -68,3 +68,10 @@ video {
     0% { transform: translateY(100vh); }
     100% { transform: translateY(-10vh); }
 }
+#music-btn {
+    margin-top: 20px;
+    background: black;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+}
