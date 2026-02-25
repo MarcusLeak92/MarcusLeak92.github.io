@@ -1,6 +1,6 @@
 function checkPassword() {
     var password = document.getElementById("password-input").value;
-    if(password === "tulip") {  // CHANGE THIS PASSWORD
+    if(password === "waterbar") {  // CHANGE THIS PASSWORD
         document.getElementById("password-screen").style.display = "none";
         document.getElementById("main-content").classList.remove("hidden");
     } else {
