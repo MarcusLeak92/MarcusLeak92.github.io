@@ -1,20 +1,52 @@
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    font-family: 'Georgia', serif;
+    background: white;
     text-align: center;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+#password-screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: black;
     color: white;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.container {
-    padding: 30px;
+.collage {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.gallery img {
+.collage img {
     width: 200px;
     margin: 10px;
     border-radius: 15px;
-    box-shadow: 0 0 15px pink;
 }
 
 video {
@@ -23,20 +55,16 @@ video {
     margin: 20px;
 }
 
-button {
-    padding: 15px 25px;
-    font-size: 18px;
-    margin: 10px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
+/* Floating hearts */
+.hearts::before {
+    content: "🤍 🤍 🤍 🤍 🤍";
+    font-size: 30px;
+    position: absolute;
+    width: 100%;
+    animation: float 10s linear infinite;
 }
 
-button:hover {
-    transform: scale(1.1);
-}
-
-.buttons {
-    position: relative;
+@keyframes float {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-10vh); }
 }
