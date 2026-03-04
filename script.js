@@ -36,3 +36,67 @@ function moveButton() {
 function celebrate() {
     document.getElementById("celebration").classList.remove("hidden");
 }
+/* FLOATING HEARTS */
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+    heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
+
+    document.getElementById("hearts-container").appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+}
+
+setInterval(createHeart, 300);
+
+
+/* CONFETTI EXPLOSION */
+
+function celebrate() {
+    document.getElementById("celebration").classList.remove("hidden");
+    startConfetti();
+}
+
+function startConfetti() {
+    const canvas = document.getElementById("confetti");
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const confettiPieces = [];
+
+    for (let i = 0; i < 150; i++) {
+        confettiPieces.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height - canvas.height,
+            size: Math.random() * 8 + 4,
+            speed: Math.random() * 3 + 2,
+            color: `hsl(${Math.random() * 360}, 100%, 50%)`
+        });
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        confettiPieces.forEach(piece => {
+            piece.y += piece.speed;
+            ctx.fillStyle = piece.color;
+            ctx.fillRect(piece.x, piece.y, piece.size, piece.size);
+
+            if (piece.y > canvas.height) {
+                piece.y = -10;
+            }
+        });
+
+        requestAnimationFrame(draw);
+    }
+
+    draw();
+}
