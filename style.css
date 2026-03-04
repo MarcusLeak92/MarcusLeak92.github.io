@@ -1,0 +1,89 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    color: white;
+    overflow-x: hidden;
+}
+
+h1 {
+    animation: fadeIn 2s ease-in-out;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* PHOTO COLLAGE */
+.photo-collage {
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    gap: 20px;
+    justify-content: center;
+    margin: 30px;
+}
+
+.photo-collage img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    animation: float 4s infinite ease-in-out;
+}
+
+/* VIDEO COLLAGE */
+.video-collage {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px;
+}
+
+.video-collage video {
+    width: 300px;
+    border-radius: 20px;
+}
+
+/* FINAL PAGE */
+.big-question {
+    font-size: 42px;
+    margin-top: 40px;
+}
+
+.yes {
+    background: hotpink;
+}
+
+.no {
+    background: gray;
+    position: absolute;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
