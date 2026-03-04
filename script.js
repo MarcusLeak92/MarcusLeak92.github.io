@@ -1,6 +1,6 @@
 function checkPassword1() {
     const password = document.getElementById("password1").value;
-    if (password === "first") {
+    if (password === "10/03/25") {
         window.location.href = "photos.html";
     } else {
         alert("Not quite 😉");
@@ -9,7 +9,7 @@ function checkPassword1() {
 
 function checkPassword2() {
     const password = document.getElementById("password2").value;
-    if (password === "second") {
+    if (password === "dri") {
         window.location.href = "videos.html";
     } else {
         alert("Try again cutie 💕");
@@ -18,7 +18,7 @@ function checkPassword2() {
 
 function checkPassword3() {
     const password = document.getElementById("password3").value;
-    if (password === "forever") {
+    if (password === "god went crazy") {
         window.location.href = "final.html";
     } else {
         alert("Almost there 😌");
